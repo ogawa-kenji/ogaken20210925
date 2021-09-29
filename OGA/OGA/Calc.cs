@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OGA
 {
-    public class Calc
+    public static class Calc
     {
         /// <summary>
         /// 四捨五入
@@ -19,7 +19,7 @@ namespace OGA
         /// 負の数は絶対値として丸める
         /// 四捨五入するメソッド
         /// </returns>
-        public decimal Round(decimal val,int digits)
+        public static decimal Round(decimal val,int digits)
         {
 
             if (val == 0m) return val;
@@ -39,7 +39,7 @@ namespace OGA
         /// 切り上げ
         /// 
         /// </returns>
-        public decimal RoundUp(decimal val, int digits)
+        public static decimal RoundUp(decimal val, int digits)
         {
 
             if (val == 0m) return val;
@@ -59,7 +59,7 @@ namespace OGA
         /// 切り上げ
         /// 
         /// </returns>
-        public decimal RoundDown(decimal val, int digits)
+        public static decimal RoundDown(decimal val, int digits)
         {
 
             if (val == 0m) return val;
