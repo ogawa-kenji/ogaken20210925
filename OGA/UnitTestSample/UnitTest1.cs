@@ -110,5 +110,40 @@ namespace UnitTestSample
 
         }
 
+        [TestMethod]
+        public void StartOfMonthのテスト()
+        {
+            Assert.AreEqual(OGA.DateUtil.StartOfMonth(new DateTime(2021, 10, 1)), new DateTime(2021, 10, 1));
+            Assert.AreEqual(OGA.DateUtil.StartOfMonth(new DateTime(2021, 10, 2)), new DateTime(2021, 10, 1));
+            Assert.AreEqual(OGA.DateUtil.StartOfMonth(new DateTime(2021, 10, 3)), new DateTime(2021, 10, 1));
+            Assert.AreEqual(OGA.DateUtil.StartOfMonth(new DateTime(2021, 10, 4)), new DateTime(2021, 10, 1));
+            Assert.AreEqual(OGA.DateUtil.StartOfMonth(new DateTime(2021, 10, 5)), new DateTime(2021, 10, 1));
+            Assert.AreEqual(OGA.DateUtil.StartOfMonth(new DateTime(2021, 10, 6)), new DateTime(2021, 10, 1));
+            Assert.AreEqual(OGA.DateUtil.StartOfMonth(new DateTime(2021, 10, 7)), new DateTime(2021, 10, 1));
+            Assert.AreEqual(OGA.DateUtil.StartOfMonth(new DateTime(2021, 10, 8)), new DateTime(2021, 10, 1));
+            Assert.AreEqual(OGA.DateUtil.StartOfMonth(new DateTime(2021, 10, 9)), new DateTime(2021, 10, 1));
+            Assert.AreEqual(OGA.DateUtil.StartOfMonth(new DateTime(2021, 10, 10)), new DateTime(2021, 10, 1));
+
+        }
+
+        [TestMethod]
+        public void EndOfMonthのテスト()
+        {
+            Assert.AreEqual(OGA.DateUtil.EndOfMonth(new DateTime(2021, 10, 1)), new DateTime(2021, 10, 31));
+            Assert.AreEqual(OGA.DateUtil.EndOfMonth(new DateTime(2021, 11, 2)), new DateTime(2021, 11, 30));
+            Assert.AreEqual(OGA.DateUtil.EndOfMonth(new DateTime(2021, 12, 3)), new DateTime(2021, 12, 31));
+            Assert.AreEqual(OGA.DateUtil.EndOfMonth(new DateTime(2021, 1, 4)), new DateTime(2021, 1, 31));
+            Assert.AreEqual(OGA.DateUtil.EndOfMonth(new DateTime(2021, 2, 5)), new DateTime(2021, 2, 28));
+            Assert.AreEqual(OGA.DateUtil.EndOfMonth(new DateTime(2021, 3, 6)), new DateTime(2021, 3, 31));
+            Assert.AreEqual(OGA.DateUtil.EndOfMonth(new DateTime(2021, 4, 7)), new DateTime(2021, 4, 30));
+            Assert.AreEqual(OGA.DateUtil.EndOfMonth(new DateTime(2021, 5, 8)), new DateTime(2021, 5, 31));
+            Assert.AreEqual(OGA.DateUtil.EndOfMonth(new DateTime(2021, 6, 9)), new DateTime(2021, 6, 30));
+            Assert.AreEqual(OGA.DateUtil.EndOfMonth(new DateTime(2021, 7, 10)), new DateTime(2021, 7, 31));
+
+            // うるう年
+            Assert.AreEqual(OGA.DateUtil.EndOfMonth(new DateTime(2020, 2, 5)), new DateTime(2020, 2, 29));
+
+        }
+
     }
 }

@@ -70,5 +70,8 @@ namespace OGA
             return System.Math.Floor(System.Math.Abs(val) * coefficient) / coefficient * sign;
         }
 
+
+
+
     }
 }
