@@ -145,5 +145,15 @@ namespace UnitTestSample
 
         }
 
+        [TestMethod]
+        public void ReadCsvのテスト()
+        {
+           var test = OGA.CsvHelper.ReadCsv(@"G:\github\ogaken20210926\OGA\OGA\新しいテキスト ドキュメント.csv");
+
+
+            Assert.AreEqual(test[0].col1, "1");
+
+        }
+
     }
 }
